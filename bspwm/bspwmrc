@@ -12,7 +12,7 @@ else
 fi
 
 bspc config border_width         1
-bspc config window_gap           10
+bspc config window_gap           8
 
 #bspc config initial_polarity first_child
 bspc config focus_follows_pointer true
@@ -33,6 +33,7 @@ bspc rule -a '*:guake' state=floating focus=on
 picom -b &
 dunst &
 nm-applet &
+#nitrogen --restore &
 albert &
 guake &
 unclutter --ignore-scrolling --timeout 2 &
