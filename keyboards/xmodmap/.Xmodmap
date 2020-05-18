@@ -1,0 +1,30 @@
+! usefull commands
+! 
+! find out info just by pressing the keys:
+! xenv -event keyboard
+! 
+! to enable auto repetition of keys using their keycode:
+! xset r 78
+
+
+
+keycode 78  = y Y y Y 
+keycode 127 = u U u U 
+keycode 77  = i I i I 
+keycode 106 = o O o O 
+keycode 63  = p P p P 
+keycode 82  = BackSpace BackSpace BackSpace BackSpace NoSymbol NoSymbol Terminate_Server
+keycode 110 = h H h H
+keycode 112 = j J j J
+keycode 79  = k K k K
+keycode 80  = l L l L
+keycode 81  = ccedilla Ccedilla ccedilla Ccedilla
+keycode 86  = Return Return Return Return NoSymbol NoSymbol
+keycode 115 = n N n N 
+keycode 117 = m M m M 
+keycode 83  = comma semicolon
+keycode 84  = period colon
+keycode 85  = minus underscore
+keycode 104 = Shift_L NoSymbol Shift_L NoSymbol Shift_L Shift_L
+keycode 90  = Super_R Super_R Super_R Super_R NoSymbol NoSymbol
+
