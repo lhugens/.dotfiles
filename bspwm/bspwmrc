@@ -2,14 +2,16 @@
 
 sxhkd  &
 
-my_laptop_external_monitor=$(xrandr --query | grep 'HDMI-1')
-if [[ $my_laptop_external_monitor = *connected* ]]; then
-	bspc monitor HDMI-1 -d 1 2 3 4 5 6 7 8
-	bspc monitor eDP-1 -d 9 10
-	xrandr --output HDMI-1 --primary --mode 1920x1080 --rotate normal --output eDP-1 --mode 1920x1080 --rotate normal --below HDMI-1
-else
-	bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 10
-fi
+[[ "$(xrandr --query | grep 'HDMI-1')" = *disconnected* ]] && \
+
+    {   bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 10 ;
+        killall -q polybar;
+        polybar --reload eDP1; } || \
+
+    {   bspc monitor HDMI-1 -d 1 2 3 4 5 6 7 8 ;
+	    bspc monitor eDP-1  -d 9 10 ;
+	    xrandr  --output HDMI-1 --primary   --mode 1920x1080 --rotate normal \
+                --output eDP-1              --mode 1920x1080 --rotate normal --below HDMI-1 ; }
 
 bspc config border_width         1
 bspc config window_gap           8

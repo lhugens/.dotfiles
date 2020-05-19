@@ -10,8 +10,8 @@ super + ctrl + 3
 super + ctrl + 0
     killall -q polybar; bspc config bottom_padding 0
 
-super + shift + m
-	kitty -e unimatrix -af -l k -s 95
+super + shift + j
+	kitty -e python -m wpm
 
 super + d
 	kitty -e ranger ~/Documents

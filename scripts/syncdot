@@ -14,8 +14,8 @@ rsync -avu --delete ~/.config/albert 	~/.dotfiles
 
 cd ~/.dotfiles
 
-git commit -a -m "update" &&
 git add --all &&
+git commit -a -m "update" &&
 git push origin master &&
 
 cd -
