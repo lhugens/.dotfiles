@@ -56,7 +56,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
 ;modules-center = mpd
-modules-right = updates-arch-combined alsa backlight-acpi filesystem memory cpu temperature battery date 
+modules-right = updates-arch-combined alsa backlight-acpi filesystem memory cpu temperature battery date_long
 
 tray-position = center
 tray-padding = 2
@@ -107,7 +107,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
 ;modules-center = mpd
-modules-right = updates-arch-combined alsa backlight-acpi filesystem memory cpu temperature battery date 
+modules-right = updates-arch-combined alsa memory cpu temperature battery date_short
 
 tray-position = center
 tray-padding = 2
@@ -307,7 +307,7 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-[module/date]
+[module/date_long]
 type = internal/date
 interval = 5
 
@@ -322,6 +322,22 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %date% %time%
+
+[module/date_short]
+type = internal/date
+interval = 5
+
+date =  %A %d-%m 
+date-alt = " %Y-%m-%d"
+
+time = %H:%M 
+time-alt = %H:%M:%S
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+
+label = %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio

@@ -37,11 +37,11 @@ bspc rule -a '*:guake'      state=floating focus=on
 picom -b &
 dunst &
 nm-applet &
-#nitrogen --restore &
 albert &
-guake &
 unclutter --ignore-scrolling --timeout 2 &
 redshift -x
 redshift -O 3600
 xset s off
 killall -SIGUSR1 dunst
+#nitrogen --restore &
+#guake &

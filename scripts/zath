@@ -1,0 +1,5 @@
+cd ~/.config/zathura &&
+
+[[ -f zathurarc ]] && \
+    { mv  zathurarc .zathurarc ; } || \
+    { mv .zathurarc  zathurarc ; }

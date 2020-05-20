@@ -10,8 +10,11 @@ super + ctrl + 0
 super + ctrl + {h,v}
     source ~/.dotfiles/scripts/monitor_{horizontal,vertical}
 
-super + shift + j
+super + ctrl + j
 	kitty -e python -m wpm
+
+super + ctrl + z
+    source ~/.dotfiles/scripts/zathura
 
 super + d
 	kitty -e ranger ~/Documents
