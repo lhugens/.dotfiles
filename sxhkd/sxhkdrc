@@ -4,11 +4,11 @@
 super + ctrl + {1,2}
     polybar --reload {eDP1, HDMI1} & 
 
-super + ctrl + 3 
-    bspc config bottom_padding 15
-
 super + ctrl + 0
     killall -q polybar; bspc config bottom_padding 0
+
+super + ctrl + {h,v}
+    source ~/.dotfiles/scripts/monitor_{horizontal,vertical}
 
 super + shift + j
 	kitty -e python -m wpm

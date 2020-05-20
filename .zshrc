@@ -28,8 +28,9 @@ alias iu="bash uninstall.bash && bash install.bash"
 
 ###################################################################
 
-# directories added to path
+# usage of scripts
 export PATH="$HOME/.dotfiles/scripts:$PATH"
+s(){ source ~/.dotfiles/scripts/$1 }
 
 # virtualenv
 virtual(){

@@ -485,4 +485,4 @@ margin-bottom = 5
 [module/updates-arch-combined]
 type = custom/script
 exec = ~/.config/polybar/updates-arch-combined.sh
-interval = 600
+interval = 60
