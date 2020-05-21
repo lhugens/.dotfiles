@@ -6,8 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 /* static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true"; */
-static char *font = "DejaVu Sans Mono:pixelsize=13:weight=medium:antialias=true:autohint=true";
-static int borderpx = 1;
+static char *font = "DejaVu Sans Mono:size=11:antialias=true:autohint=true";
+static int borderpx = 5;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -90,22 +90,22 @@ static const char *colorname[] = {
     /* 8 normal colors */
     "#0c1115", /* */
     "#bd0f2f", /* */
-    "#35a770",
-    "#b58900",
-    "#268bd2",
-    "#d33682",
-    "#2aa198", 
-    "#eee8d5",
+    "#35a770", /* */
+    "#fb9435", /* */
+    "#1f5872", /* */
+    "#bd2523", /* */
+    "#778397", /* */ 
+    "#eee8d5", /* */
 
     /* 8 bright colors */
-    "#2e343c", /* */
-    "#cb4b16",
+    "#657b83", /* */
+    "#bd2523", /* */
     "#35a770", /* */
     "#657b83",
     "#1f5872", /* */
-    "#6c71c4",
+    "#bd2523", /* */
     "#93a1a1",
-    "#ffffff",
+    "#eee8d5", /* */
 
 	[255] = 0,
 
