@@ -5,6 +5,7 @@ rsync -avu --delete ~/.vimrc 		~/.dotfiles
 rsync -avu --delete ~/.config/bspwm 	~/.dotfiles
 rsync -avu --delete ~/.config/sxhkd 	~/.dotfiles
 rsync -avu --delete ~/.config/kitty 	~/.dotfiles
+rsync -avu --delete ~/.config/st     	~/.dotfiles
 rsync -avu --delete ~/.config/dunst 	~/.dotfiles
 rsync -avu --delete ~/.config/zathura 	~/.dotfiles
 rsync -avu --delete ~/.config/polybar 	~/.dotfiles
@@ -13,6 +14,8 @@ rsync -avu --delete ~/.config/albert 	~/.dotfiles
 
 
 cd ~/.dotfiles
+
+sudo rm st/st
 
 git add --all &&
 git commit -a -m "update" &&

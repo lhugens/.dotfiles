@@ -132,6 +132,8 @@ noremap  <silent> ,m <ESC>:wa<CR>:!make compile<CR>
 inoremap <silent> ,m <ESC>:wa<CR>:!make compile<CR>
 noremap  <silent> ,n <ESC>:wa<CR>:!make<CR>
 inoremap <silent> ,n <ESC>:wa<CR>:!make<CR>
+noremap  <silent> ,b <ESC>:wa<CR>:!sudo make clean install<CR>
+inoremap <silent> ,b <ESC>:wa<CR>:!sudo make clean install<CR>
 
 " clean highlighted words from search
 noremap  <silent> ,c <ESC>:nohl<CR>

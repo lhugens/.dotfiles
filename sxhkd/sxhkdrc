@@ -14,7 +14,7 @@ super + ctrl + j
 	kitty -e python -m wpm
 
 super + ctrl + z
-    source ~/.dotfiles/scripts/zathura
+    source ~/.dotfiles/scripts/zath
 
 super + d
 	kitty -e ranger ~/Documents
@@ -56,6 +56,10 @@ super + {_,shift + }q
 
 # terminal emulator
 super + Return
+	st
+
+# terminal emulator
+super + ctrl + Return
 	kitty
 
 # program launcher
