@@ -8,7 +8,7 @@ super + ctrl + 0
     killall -q polybar; bspc config bottom_padding 0
 
 super + ctrl + {h,v}
-    source ~/.dotfiles/scripts/monitor_{horizontal,vertical}
+    source ~/.dotfiles/scripts/monitor {horizontal,vertical}
 
 super + ctrl + j
 	kitty -e python -m wpm

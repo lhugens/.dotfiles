@@ -7,6 +7,7 @@
  */
 /* static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true"; */
 static char *font = "DejaVu Sans Mono:size=11:antialias=true:autohint=true";
+static char *font2 = "DejaVu Sans Mono:size=11:antialias=true:autohint=true";
 static int borderpx = 5;
 
 /*
@@ -89,7 +90,7 @@ unsigned int tabspaces = 8;
 static const char *colorname[] = {
     /* 8 normal colors */
     "#0c1115", /* */
-    "#bd0f2f", /* */
+    "#bd2523", /* */
     "#35a770", /* */
     "#fb9435", /* */
     "#1f5872", /* */
@@ -102,7 +103,7 @@ static const char *colorname[] = {
     "#bd2523", /* */
     "#35a770", /* */
     "#657b83",
-    "#1f5872", /* */
+    "#2a8bc1",
     "#bd2523", /* */
     "#93a1a1",
     "#eee8d5", /* */

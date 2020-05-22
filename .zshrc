@@ -50,3 +50,4 @@ paclog(){ grep -iE 'installed|upgraded' /var/log/pacman.log }
 fword(){ find . 2>/dev/null | grep -i "$1"  }
 scanhosts(){ nmap -sLP 192.168.1.0/24 | grep -a "lan" }
 yt(){ youtube-dl -f best -ciw -o "%(playlist)s_%(playlist_index)%_%(title)s.%(ext)s" -v $1}
+p(){ ps aux | grep -ia "$1" }
