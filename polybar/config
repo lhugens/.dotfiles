@@ -160,20 +160,20 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %name%
+label-focused = %index%
 label-focused-background = ${colors.background-alt}
 ;label-focused-underline= ${colors.primary}
 label-focused-underline= #0a6cf5
 label-focused-padding = 2
 
-label-occupied = %name%
+label-occupied = %index%
 label-occupied-padding = 2
 
-label-urgent = %name%!
+label-urgent = %index%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %name%
+label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 

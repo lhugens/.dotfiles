@@ -8,7 +8,11 @@ super + ctrl + 0
     killall -q polybar; bspc config bottom_padding 0
 
 super + ctrl + {h,v}
-    source ~/.dotfiles/scripts/monitor {horizontal,vertical}
+    xrandr  --output HDMI-1 --mode 1920x1080 --rotate {normal,left} \
+            --output eDP-1  --mode 1920x1080 --rotate normal --below HDMI-1
+
+super + ctrl + m
+    ~/.config/bspwm/monitor
 
 super + ctrl + j
 	kitty -e python -m wpm
@@ -17,7 +21,7 @@ super + ctrl + z
     source ~/.dotfiles/scripts/zath
 
 super + d
-	kitty -e ranger ~/Documents
+	st -e ranger ~/Documents
 
 super + a
     guake -t
