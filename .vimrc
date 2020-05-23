@@ -31,7 +31,7 @@ Plugin 'dusans/vim-hardmode'
 
 call vundle#end()
 
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Required for vundle
 "filetype plugin indent on 
