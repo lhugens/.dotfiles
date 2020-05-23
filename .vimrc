@@ -27,9 +27,11 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'qxxxb/vim-searchhi' "Highlight search in cursor with a different color
 Plugin 'jiangmiao/auto-pairs' "auto completes [] and ()
+Plugin 'dusans/vim-hardmode'
 
 call vundle#end()
 
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Required for vundle
 "filetype plugin indent on 
@@ -173,3 +175,7 @@ map <C-t> :'<,'>Tabularize /=<CR>
 
 " Use "-" to go into search mode
 noremap  - <ESC>/
+
+" Toggle HardMode
+nnoremap <leader>h <Esc>:call EasyMode()<CR>
+nnoremap <leader>H <Esc>:call HardMode()<CR>
