@@ -171,7 +171,7 @@ noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
 " Tabularize equations
-map <C-t> :'<,'>Tabularize /=<CR>
+map <C-t> :'<,'>Tabularize /
 
 " Use "-" to go into search mode
 noremap  - <ESC>/
