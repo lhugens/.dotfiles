@@ -31,7 +31,10 @@ Plugin 'dusans/vim-hardmode'
 
 call vundle#end()
 
-" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" Autocommands
+" autocmd VhmEnter,BufNewFile,BufReadPost * silent! call HardMode()
+autocmd BufWritePost ~/.zshrc !source ~/.zshrc
+
 
 " Required for vundle
 "filetype plugin indent on 

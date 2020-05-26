@@ -18,14 +18,6 @@ alias :q="exit"
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc
 
-# temporary 
-unotes(){ # lyx to latex to pdf to png into md
-    cd ~/Documents/HENON/git/extra && 
-    pdftoppm Notes.pdf Notes -png &&
-    cd - >/dev/null }
-alias rv="sudo rm -r .vault & bash uninstall.bash && bash install.bash"
-alias iu="bash uninstall.bash && bash install.bash"
-
 ###################################################################
 
 # usage of scripts
@@ -51,3 +43,4 @@ fword(){ find . 2>/dev/null | grep -i "$1"  }
 scanhosts(){ nmap -sLP 192.168.1.0/24 | grep -a "lan" }
 yt(){ youtube-dl -f best -ciw -o "%(playlist)s_%(playlist_index)%_%(title)s.%(ext)s" -v $1}
 p(){ ps aux | grep -ia "$1" }
+hide(){ mv "$1" ".${1}" }
