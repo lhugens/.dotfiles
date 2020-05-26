@@ -1,5 +1,5 @@
 # history control
-HISTCONTROL=ignoredups:ignorespace
+HISTCONTROL=ignoredups:ignorespace:erasedups
 HISTSIZE=100000
 HISTFILESIZE=2000000
 
