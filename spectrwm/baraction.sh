@@ -41,6 +41,7 @@ vol() {
 ## VOLUME
 bat() {
     bat=`acpi | awk -F ',' '{print $2}' | tr -d " "`
+    [[ "$bat" -lt 15  ]] && notify-send "Low battery"
     echo -e "bat: $bat"
 }
 
