@@ -8,7 +8,7 @@ In the file .archinstall you can find all the commands I use to install Arch Lin
 Shell Configuration
 --------------------
 
-To get my exact shell configuration, including my .zshrc, do:
+To get my exact shell configuration:
 
 ``````
 git clone https://github.com/lhugens/.dotfiles
