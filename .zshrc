@@ -18,29 +18,14 @@ alias :q="exit"
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc
 
-###################################################################
+# functions  
+paclog()    { grep -iE 'installed|upgraded' /var/log/pacman.log }
+fword()     { find . 2>/dev/null | grep -i "$1"  }
+scanhosts() { nmap -sLP 192.168.1.0/24 | grep -a "lan" }
+yt()        { youtube-dl -f best -ciw -o "%(playlist)s_%(playlist_index)%_%(title)s.%(ext)s" -v $1}
+p()         { ps aux | grep -ia "$1" }
+hide()      { mv "$1" ".${1}" }
 
-# usage of scripts
-export PATH="$HOME/.dotfiles/scripts:$PATH"
-s(){ source ~/.dotfiles/scripts/$1 }
-
-# virtualenv
-virtual(){
-    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-    export WORKON_HOME=$HOME/.virtualenvs
-    export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
-    source $HOME/.local/bin/virtualenvwrapper.sh
-    workon jp >/dev/null }
-jp(){    
-    virtual
-    jupyter-notebook >/dev/null &
-    disown 
-    exit }
-
-# others  
-paclog(){ grep -iE 'installed|upgraded' /var/log/pacman.log }
-fword(){ find . 2>/dev/null | grep -i "$1"  }
-scanhosts(){ nmap -sLP 192.168.1.0/24 | grep -a "lan" }
-yt(){ youtube-dl -f best -ciw -o "%(playlist)s_%(playlist_index)%_%(title)s.%(ext)s" -v $1}
-p(){ ps aux | grep -ia "$1" }
-hide(){ mv "$1" ".${1}" }
+# fuzzy finder config
+export FZF_DEFAULT_OPTS="--layout=reverse --height=10 --bind 'tab:down' --bind 'btab:up'"
+se(){ $EDITOR "$(find ~/.dotfiles/scripts/* ~/.config/* -type f | fzf )" }

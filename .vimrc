@@ -1,7 +1,4 @@
-" Install everything
-" First install vundle:
-" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-" Then type :PluginInstall and run
+" Install everything " First install vundle: " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim " Then type :PluginInstall and run
 
 " Vundle
 filetype off
@@ -13,7 +10,6 @@ call vundle#begin()
 " Bundles
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'sjl/gundo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -22,18 +18,21 @@ Plugin 'ap/vim-css-color'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bfrg/vim-cpp-modern'
 Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'junegunn/fzf'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'qxxxb/vim-searchhi' "Highlight search in cursor with a different color
-Plugin 'jiangmiao/auto-pairs' "auto completes [] and ()
+Plugin 'qxxxb/vim-searchhi' 
+Plugin 'jiangmiao/auto-pairs' 
 Plugin 'dusans/vim-hardmode'
+Plugin 'jceb/vim-orgmode'
+"Plugin 'xolox/vim-notes'
+"Plugin 'sjl/gundo.vim'
+"Plugin 'junegunn/fzf'
 
 call vundle#end()
 
 " Autocommands
 " autocmd VhmEnter,BufNewFile,BufReadPost * silent! call HardMode()
-autocmd BufWritePost ~/.zshrc !source ~/.zshrc
+" autocmd BufWritePost ~/.zshrc !source ~/.zshrc
 
 
 " Required for vundle
@@ -82,7 +81,7 @@ set autoindent
 " Searching
 set ignorecase
 set smartcase
-set gdefault
+"set gdefault
 set hlsearch
 set showmatch
 
@@ -133,38 +132,27 @@ cnoremap <C-e> <End>
 "command! W w !sudo tee % > /dev/null
 command! W w
 
-" cpp compilation 
-noremap  <silent> ,m <ESC>:wa<CR>:!make compile<CR>
-inoremap <silent> ,m <ESC>:wa<CR>:!make compile<CR>
-noremap  <silent> ,n <ESC>:wa<CR>:!make<CR>
-inoremap <silent> ,n <ESC>:wa<CR>:!make<CR>
-noremap  <silent> ,b <ESC>:wa<CR>:!sudo make clean install<CR>
-inoremap <silent> ,b <ESC>:wa<CR>:!sudo make clean install<CR>
-
 " clean highlighted words from search
 noremap  <silent> ,c <ESC>:nohl<CR>
-inoremap <silent> ,c <ESC>:nohl<CR>
 
 " NERDtree
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 
 " fzf 
-map <C-f> :FZF<CR>
-inoremap <silent> ,f <ESC>:FZF<CR>
-nnoremap <silent> ,f :FZF<CR>
+" nnoremap <silent> ,f :FZF<CR>
 
 " Cycle through open buffers
-nnoremap <Tab> :bnext<CR>
+nnoremap <Tab>   :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
 " Better window navigation
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-l> <C-w>l
-nnoremap <silent> ,l  <C-w>h
-nnoremap <silent> ,ç  <C-w>l
+"noremap <C-j> <C-w>j
+"noremap <C-k> <C-w>k
+"noremap <C-h> <C-w>h
+"noremap <C-l> <C-w>l
+noremap <silent> ,l  <C-w>h
+noremap <silent> ,ç  <C-w>l
 
 " Yanking and pasting to system clipoard
 " note: install gVim alongside to work out of the box
@@ -182,3 +170,13 @@ noremap  - <ESC>/
 " Toggle HardMode
 nnoremap <leader>h <Esc>:call EasyMode()<CR>
 nnoremap <leader>H <Esc>:call HardMode()<CR>
+
+" type S to enter search and replace	
+nnoremap S :%s//gc<Left><Left><Left>
+
+" cpp compilation 
+noremap  <silent> ,m <ESC>:wa<CR>:!make compile<CR>
+nnoremap  ,n :!./henon carlo<Space>
+nnoremap  ,b :!./henon mealder<Space>
+nnoremap  ,c <ESC>0i//<ESC>
+nnoremap  ,x <ESC>0xx<ESC>
