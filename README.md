@@ -12,6 +12,6 @@ To get my exact shell configuration, including my .zshrc, do:
 
 ``````
 git clone https://github.com/lhugens/.dotfiles
-source .dotfiles/.setup0
-source .dotfiles/.setup1
+source .dotfiles/.scripts/setup0
+source .dotfiles/.scripts/setup1
 ``````

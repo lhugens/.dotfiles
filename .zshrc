@@ -14,6 +14,8 @@ source $ZSH/oh-my-zsh.sh
 alias cl="clear"
 alias rg="ranger"
 alias :q="exit"
+alias z="$EDITOR ~/.zshrc"
+alias v="$EDITOR ~/.vimrc"
 
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc
