@@ -20,4 +20,5 @@ alias v="$EDITOR ~/.vimrc"
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc
 
+# add ~/.scripts folder to path
 export PATH="$HOME/.scripts:$PATH"
