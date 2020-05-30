@@ -2,6 +2,7 @@
 
 rsync -avu --delete ~/.zshrc 		        ~/.dotfiles
 rsync -avu --delete ~/.vimrc 		        ~/.dotfiles
+rsync -avu --delete ~/.scripts 		        ~/.dotfiles
 rsync -avu --delete ~/.config/sxhkd 	    ~/.dotfiles
 rsync -avu --delete ~/.config/bspwm 	    ~/.dotfiles
 rsync -avu --delete ~/.config/i3     	    ~/.dotfiles

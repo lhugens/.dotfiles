@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export FZF_DEFAULT_OPTS="--layout=reverse --height=10 --bind 'tab:down' --bind 'btab:up'"
+
+$EDITOR "$(find ~/.scripts/* ~/.config/* -type f | fzf )"

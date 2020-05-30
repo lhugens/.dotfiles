@@ -18,15 +18,4 @@ alias :q="exit"
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc
 
-# functions  
-paclog()    { grep -iE 'installed|upgraded' /var/log/pacman.log }
-fword()     { find . 2>/dev/null | grep -i "${1}"  }
-scanhosts() { nmap -sLP 192.168.1.0/24 | grep -a "lan" }
-yt()        { youtube-dl -f best -ciw -o "%(playlist)s_%(playlist_index)%_%(title)s.%(ext)s" -v $1}
-p()         { ps aux | grep -ia "$1" }
-hide()      { mv "$1" ".${1}" }
-
-# fuzzy finder config
-export FZF_DEFAULT_OPTS="--layout=reverse --height=10 --bind 'tab:down' --bind 'btab:up'"
-se(){ $EDITOR "$(find ~/.dotfiles/scripts/* ~/.config/* -type f | fzf )" }
-sa(){ $EDITOR "$(find / . 2>/dev/null                   -type f | fzf )" }
+export PATH="$HOME/.scripts:$PATH"

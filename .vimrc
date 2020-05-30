@@ -147,12 +147,10 @@ nnoremap <Tab>   :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
 " Better window navigation
-"noremap <C-j> <C-w>j
-"noremap <C-k> <C-w>k
-"noremap <C-h> <C-w>h
-"noremap <C-l> <C-w>l
-noremap <silent> ,l  <C-w>h
-noremap <silent> ,ç  <C-w>l
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-h> <C-w>h
+noremap <C-l> <C-w>l
 
 " Yanking and pasting to system clipoard
 " note: install gVim alongside to work out of the box
