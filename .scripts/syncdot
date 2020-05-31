@@ -21,6 +21,8 @@ rsync -avu --delete ~/.config/albert 	    ~/.dotfiles/.config
 cd ~/.dotfiles
 
 rm .config/st/st
+rm .config/st/st-copyout
+rm .config/st/st-urlhandler
 
 git add --all &&
 git commit -a -m "update" &&
