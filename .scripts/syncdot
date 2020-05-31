@@ -20,6 +20,8 @@ rsync -avu --delete ~/.config/albert 	    ~/.dotfiles/.config
 
 cd ~/.dotfiles
 
+rm .config/st/st
+
 git add --all &&
 git commit -a -m "update" &&
 git push origin master &&
