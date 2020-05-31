@@ -1,0 +1,43 @@
+#! /bin/sh
+
+[[ -z "$(pidof sxhkd)" ]] && \
+    {
+        sxhkd  &
+        picom -b &
+        dunst &
+        nm-applet &
+        albert &
+        unclutter --ignore-scrolling --timeout 2 &
+        redshift -x &&
+        redshift -O 3600 
+        xset s off
+        killall -SIGUSR1 dunst ;
+        #nitrogen --restore &
+        #guake &
+    } || true
+
+killall -q polybar 
+
+~/.config/bspwm/monitor
+
+bspc config border_width         1
+bspc config window_gap           8
+
+#bspc config initial_polarity first_child
+bspc config focus_follows_pointer       true
+bspc config split_ratio                 0.50
+bspc config borderless_monocle          true
+bspc config gapless_monocle             true
+bspc config single_monocle              true
+bspc config normal_border_color         "#424242"
+bspc config focused_border_color        "#00FFFF"
+bspc config remove_unplugged_monitors   true
+bspc config remove_disabled_monitors    true
+#bspc window --presel right
+
+bspc rule -a Zathura        state=tiled
+bspc rule -a Emacs          state=tiled
+bspc rule -a '*:albert'     focus=on
+bspc rule -a '*:unimatrix'  state=fullscreen
+bspc rule -a '*:guake'      state=floating focus=on
+
