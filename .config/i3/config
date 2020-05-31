@@ -82,9 +82,10 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# toggle fullscreen / floating
+# layout 
 bindsym $mod+m layout toggle splith tabbed
 bindsym $mod+t floating toggle
+bindsym $mod+c layout toggle all
 
 # lock, reload, restart
 bindsym $mod+9      exec --no-startup-id blurlock
@@ -102,6 +103,20 @@ bindsym $mod+w           exec brave
 bindsym $mod+e           exec dolphin
 bindsym $mod+space       exec "rofi -show drun -show-icons -columns 2"
 bindsym $mod+d           exec $myterm -e ranger /home/hugens/Documents
+
+# AUDIO AND BRIGHTNESS
+bindsym $mod+a                exec pulseaudio-ctl up 5
+bindsym XF86AudioRaiseVolume  exec pulseaudio-ctl up 5
+bindsym $mod+Shift+a          exec pulseaudio-ctl down 5
+bindsym XF86AudioLowerVolume  exec pulseaudio-ctl down 5
+bindsym $mod+Ctrl+a           exec pulseaudio-ctl mute
+bindsym XF86AudioMute         exec pulseaudio-ctl mute
+bindsym XF86MicMute           exec pulseaudio-ctl mute-input
+bindsym $mod+s                exec xbacklight -inc 5
+bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
+bindsym $mod+Shift+s          exec xbacklight -dec 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym $mod+Ctrl+s           exec xbacklight -dec 100
 
 # BAR
 bindsym $mod+b bar mode toggle
