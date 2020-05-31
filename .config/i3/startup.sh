@@ -12,7 +12,7 @@ xset r rate 300 50 &
 
 nm-applet &
 
-redshift -O 4000
+redshift -O 3600
 
 
 
