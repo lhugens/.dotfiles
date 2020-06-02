@@ -22,11 +22,12 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'qxxxb/vim-searchhi' 
 Plugin 'jiangmiao/auto-pairs' 
-Plugin 'dusans/vim-hardmode'
-Plugin 'jceb/vim-orgmode'
+"Plugin 'dusans/vim-hardmode'
+"Plugin 'jceb/vim-orgmode'
 "Plugin 'xolox/vim-notes'
 "Plugin 'sjl/gundo.vim'
 "Plugin 'junegunn/fzf'
+"Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 
@@ -151,6 +152,8 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
+noremap ,l <C-w>h
+noremap ,ç <C-w>l
 
 " Yanking and pasting to system clipoard
 " note: install gVim alongside to work out of the box
@@ -165,16 +168,12 @@ map <C-t> :'<,'>Tabularize /
 " Use "-" to go into search mode
 noremap  - <ESC>/
 
-" Toggle HardMode
-nnoremap <leader>h <Esc>:call EasyMode()<CR>
-nnoremap <leader>H <Esc>:call HardMode()<CR>
-
 " type S to enter search and replace	
 nnoremap S :%s//gc<Left><Left><Left>
 
-" cpp compilation 
-noremap  <silent> ,m <ESC>:wa<CR>:!make compile<CR>
-nnoremap  ,n :!./henon carlo<Space>
-nnoremap  ,b :!./henon mealder<Space>
-nnoremap  ,c <ESC>0i//<ESC>
-nnoremap  ,x <ESC>0xx<ESC>
+" load directory-specific configs from a .vim fil
+let b:thisdir=expand("%:p:h")
+let b:vim=b:thisdir."/.vim"
+if (filereadable(b:vim))
+    execute "source ".b:vim
+endif
