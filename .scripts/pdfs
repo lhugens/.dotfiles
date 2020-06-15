@@ -1,0 +1,6 @@
+#!/bin/bash
+
+entry="$( { find ~/Documents/ -iname '*pdf' -o -iname '*.djvu' | rofi -dmenu -i -width 90 ; } || echo "" )"
+
+[[ -z "$entry" ]] && exit || zathura "${entry}"
+

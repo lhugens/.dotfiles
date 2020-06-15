@@ -1,6 +1,6 @@
 #!/bin/bash
 
-albert -k Alt+b &
+# albert -k Alt+b &
 
 picom -b &
 

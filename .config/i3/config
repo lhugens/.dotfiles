@@ -103,8 +103,11 @@ bindsym $mod+w           exec brave
 bindsym $mod+e           exec dolphin
 bindsym $mod+b           exec "rofi -show drun -show-icons -columns 2"
 bindsym $mod+space       exec "rofi -show drun -show-icons -columns 2"
+bindsym $alt+b           exec sh /home/hugens/.scripts/pdfs
+bindsym $alt+space       exec sh /home/hugens/.scripts/pdfs
 bindsym $mod+v           exec $myterm -e ranger /home/hugens/Documents/UNI
 
+exec sh /home/hugens/.config/i3/startup.sh
 # AUDIO AND BRIGHTNESS
 bindsym $mod+z                exec pulseaudio-ctl up 5
 bindsym XF86AudioRaiseVolume  exec pulseaudio-ctl up 5
