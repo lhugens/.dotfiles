@@ -16,9 +16,11 @@ alias rg="ranger"
 alias :q="exit"
 alias z="$EDITOR ~/.zshrc"
 alias v="$EDITOR ~/.vimrc"
+k(){ cd /home/hugens/kyria/qmk_firmware/keyboards/kyria/keymaps/lhugens && vim keymap.c }
+swap(){ setxkbmap -option caps:swapescape }
 
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc
 
 # add ~/.scripts folder to path
-export PATH="$HOME/.scripts:$PATH"
+export PATH="$HOME/.scripts:$HOME/.local/bin:$PATH"
