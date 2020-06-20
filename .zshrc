@@ -5,6 +5,8 @@ HISTFILESIZE=2000000
 
 # oh-my-zsh config
 export EDITOR=/usr/bin/vim
+export TERMINAL=/usr/local/bin/st
+export BROWSER=/usr/bin/brave
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="bira"
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
@@ -13,11 +15,11 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 alias cl="clear"
 alias rg="ranger"
+alias df="dfc"
 alias :q="exit"
 alias z="$EDITOR ~/.zshrc"
 alias v="$EDITOR ~/.vimrc"
 k(){ cd /home/hugens/kyria/qmk_firmware/keyboards/kyria/keymaps/lhugens && vim keymap.c }
-swap(){ setxkbmap -option caps:swapescape }
 
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc

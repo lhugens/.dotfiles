@@ -55,11 +55,12 @@ mode "$redshift" {
 
 # screen orientation
 bindsym $mod+o mode "$orientation"
-set $orientation (v)ertical, (h)orizontal, (l)aptop
+set $orientation (v)ertical, (h)orizontal, (l)aptop, caps:(s)wapescape
 mode "$orientation" {
         bindsym v exec autorandr --load monitor_vertical , mode "default"
         bindsym h exec autorandr --load monitor          , mode "default"
         bindsym l exec autorandr --load laptop           , mode "default"
+        bindsym s exec setxkbmap -option caps:swapescape  , mode "default"
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -103,8 +104,8 @@ bindsym $mod+w           exec brave
 bindsym $mod+e           exec dolphin
 bindsym $mod+b           exec "rofi -show drun -show-icons -columns 2"
 bindsym $mod+space       exec "rofi -show drun -show-icons -columns 2"
-bindsym $alt+b           exec sh /home/hugens/.scripts/pdfs
-bindsym $alt+space       exec sh /home/hugens/.scripts/pdfs
+bindsym $alt+b           exec sh /home/hugens/.scripts/brewster
+bindsym $alt+space       exec sh /home/hugens/.scripts/brewster
 bindsym $mod+v           exec $myterm -e ranger /home/hugens/Documents/UNI
 
 exec sh /home/hugens/.config/i3/startup.sh
