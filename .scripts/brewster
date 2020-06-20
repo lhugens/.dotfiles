@@ -23,7 +23,7 @@ case $(file --mime-type "$entry" -bL) in
         vlc "$entry"
         ;;
 
-    application/pdf | application/postscript)
+    application/pdf | image/vnd.djvu | application/postscript)
         zathura "$entry"
         ;;
 
