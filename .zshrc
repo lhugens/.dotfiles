@@ -19,10 +19,9 @@ alias df="dfc"
 alias :q="exit"
 alias z="$EDITOR ~/.zshrc"
 alias v="$EDITOR ~/.vimrc"
-k(){ cd /home/hugens/kyria/qmk_firmware/keyboards/kyria/keymaps/lhugens && vim keymap.c }
 
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc
 
-# add ~/.scripts folder to path
+# add ~/.scripts and ~/.local/bin folders to path
 export PATH="$HOME/.scripts:$HOME/.local/bin:$PATH"
