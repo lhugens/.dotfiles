@@ -60,7 +60,7 @@ mode "$orientation" {
         bindsym v exec autorandr --load monitor_vertical , mode "default"
         bindsym h exec autorandr --load monitor          , mode "default"
         bindsym l exec autorandr --load laptop           , mode "default"
-        bindsym s exec setxkbmap -option caps:swapescape  , mode "default"
+        bindsym s exec sh /home/hugens/.scripts/escswap  , mode "default"
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
