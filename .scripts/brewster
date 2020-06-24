@@ -5,7 +5,7 @@ entry="$( { find -L   \
         ~/Downloads     \
         ~/Movies        \
         ~/Videos        \
-        -type f | rofi -sort true -sorting-method fzf -dmenu -i -p open ; } || echo"" )"
+        -type f | rofi -width 100 -sort true -sorting-method fzf -dmenu -i -p open ; } || echo"" )"
 
 [[ -z "$entry" ]] && exit 
 

@@ -102,10 +102,8 @@ bindsym $mod+Return      exec $myterm
 bindsym $mod+Ctrl+Return exec kitty
 bindsym $mod+w           exec brave
 bindsym $mod+e           exec dolphin
-bindsym $mod+b           exec "rofi -show drun -show-icons -columns 2"
 bindsym $mod+space       exec "rofi -show drun -show-icons -columns 2"
-bindsym $alt+b           exec sh /home/hugens/.scripts/brewster
-bindsym $alt+space       exec sh /home/hugens/.scripts/brewster
+bindsym $mod+b           exec sh /home/hugens/.scripts/brewster
 bindsym $mod+v           exec $myterm -e ranger /home/hugens/Documents/UNI
 
 exec sh /home/hugens/.config/i3/startup.sh

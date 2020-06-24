@@ -8,9 +8,13 @@ export EDITOR=/usr/bin/vim
 export TERMINAL=/usr/local/bin/st
 export BROWSER=/usr/bin/brave
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="bira"
+export ZSH_THEME="bira"
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+
+#source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source $ZSH/themes/bira.zsh-theme
 
 # aliases
 alias cl="clear"
