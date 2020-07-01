@@ -22,12 +22,15 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'qxxxb/vim-searchhi' 
 Plugin 'jiangmiao/auto-pairs' 
+Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'ryanoasis/vim-devicons'
 "Plugin 'dusans/vim-hardmode'
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'xolox/vim-notes'
 "Plugin 'sjl/gundo.vim'
 "Plugin 'junegunn/fzf'
 "Plugin 'itchyny/lightline.vim'
+"Plugin 'hardcoreplayers/spaceline.vim'
 
 call vundle#end()
 
@@ -57,7 +60,8 @@ filetype plugin indent on
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='powerlineish'
+let g:arline_solarized_bg="dark"
+let g:airline_theme='solarized'
 
 " History
 set history=50

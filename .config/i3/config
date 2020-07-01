@@ -104,7 +104,7 @@ bindsym $mod+w           exec brave
 bindsym $mod+e           exec dolphin
 bindsym $mod+space       exec "rofi -show drun -show-icons -columns 2"
 bindsym $mod+b           exec sh /home/hugens/.scripts/brewster
-bindsym $mod+v           exec $myterm -e ranger /home/hugens/Documents/UNI
+bindsym $mod+v           exec $myterm -e ranger /home/hugens/Documents/UNI/FMC
 
 exec sh /home/hugens/.config/i3/startup.sh
 # AUDIO AND BRIGHTNESS
@@ -116,9 +116,9 @@ bindsym $mod+Ctrl+z           exec pulseaudio-ctl mute
 bindsym XF86AudioMute         exec pulseaudio-ctl mute
 bindsym XF86MicMute           exec pulseaudio-ctl mute-input
 bindsym $mod+x                exec xbacklight -inc 5
-bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
+bindsym XF86MonBrightnessUp   exec xbacklight -inc 1
 bindsym $mod+Shift+x          exec xbacklight -dec 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 1
 bindsym $mod+Ctrl+x           exec xbacklight -dec 100
 
 # BAR

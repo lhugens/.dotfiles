@@ -1,4 +1,8 @@
-# history control
+## If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux 
+
+#history control
 HISTCONTROL=ignoredups:ignorespace:erasedups
 HISTSIZE=100000
 HISTFILESIZE=2000000
@@ -28,4 +32,5 @@ alias v="$EDITOR ~/.vimrc"
 [ -f ~/.localrc ] && source ~/.localrc
 
 # add ~/.scripts and ~/.local/bin folders to path
-export PATH="$HOME/.scripts:$HOME/.local/bin:$PATH"
+export PATH=$PATH$( find $HOME/.scripts/ -type d -printf ":%p" )
+export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
