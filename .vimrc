@@ -1,3 +1,12 @@
+        "/\         
+       "/  \        
+      "/\   \       
+     "/  __  \      
+    "/  (  )  \     
+   "/ __|  |__\\    
+  "/.`        `.\   
+"github.com/lhugens
+
 " VUNDLE
 filetype plugin off
 let g:vundle_default_git_proto = 'git'
@@ -12,6 +21,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'qxxxb/vim-searchhi' 
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'francoiscabrol/ranger.vim'
+Plugin 'preservim/nerdcommenter'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin on 
 
@@ -23,6 +34,7 @@ colorscheme gruvbox
 set number relativenumber
 set encoding=utf-8 
 set clipboard=unnamedplus
+set cursorline
 
 nnoremap <Tab>    :bnext!     <CR>
 nnoremap <S-Tab>  :bprevious! <CR>
@@ -83,3 +95,7 @@ let g:which_key_map['q'] = [ ':qa!', 'quit']
 "let g:which_key_map['w'] = [ ':wqa', 'write']
 "let g:which_key_map['s'] = [ '-', 'search']
 "let g:which_key_map['S'] = [ '<C-S>', 'search & replace']
+"
+set viewoptions=cursor,folds,slash,unix
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
