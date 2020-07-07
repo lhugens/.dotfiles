@@ -1,23 +1,24 @@
 #!/bin/zsh
 
-rsync -avu --delete ~/.zshrc 		        ~/.dotfiles
-rsync -avu --delete ~/.vimrc 		        ~/.dotfiles
-rsync -avu --delete ~/.tmux.conf 		    ~/.dotfiles
-rsync -avu --delete ~/.scripts 		        ~/.dotfiles
-rsync -avu --delete ~/.config/sxhkd 	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/bspwm 	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/i3     	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/i3status 	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/spectrwm 	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/alacritty    	~/.dotfiles/.config
-rsync -avu --delete ~/.config/kitty 	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/tmux   	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/st     	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/dunst 	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/zathura 	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/polybar 	    ~/.dotfiles/.config
-rsync -avu --delete ~/.config/rofi 	        ~/.dotfiles/.config
-rsync -avu --delete ~/.config/albert 	    ~/.dotfiles/.config
+rsync -avu --delete ~/.zshrc            ~/.dotfiles
+rsync -avu --delete ~/.vimrc            ~/.dotfiles
+rsync -avu --delete ~/.vim              ~/.dotfiles
+rsync -avu --delete ~/.tmux.conf        ~/.dotfiles
+rsync -avu --delete ~/.scripts          ~/.dotfiles
+rsync -avu --delete ~/.config/sxhkd     ~/.dotfiles/.config
+rsync -avu --delete ~/.config/bspwm     ~/.dotfiles/.config
+rsync -avu --delete ~/.config/i3        ~/.dotfiles/.config
+rsync -avu --delete ~/.config/i3status  ~/.dotfiles/.config
+rsync -avu --delete ~/.config/spectrwm  ~/.dotfiles/.config
+rsync -avu --delete ~/.config/alacritty ~/.dotfiles/.config
+rsync -avu --delete ~/.config/kitty     ~/.dotfiles/.config
+rsync -avu --delete ~/.config/tmux      ~/.dotfiles/.config
+rsync -avu --delete ~/.config/st        ~/.dotfiles/.config
+rsync -avu --delete ~/.config/dunst     ~/.dotfiles/.config
+rsync -avu --delete ~/.config/zathura   ~/.dotfiles/.config
+rsync -avu --delete ~/.config/polybar   ~/.dotfiles/.config
+rsync -avu --delete ~/.config/rofi      ~/.dotfiles/.config
+rsync -avu --delete ~/.config/albert    ~/.dotfiles/.config
 
 
 cd ~/.dotfiles

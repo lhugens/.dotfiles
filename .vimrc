@@ -60,19 +60,19 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16_default'
 
 " mappings with arguments
-nnoremap ,t :'<,'>Tabularize /
-nnoremap ,r :%s//gc<Left><Left><Left>
-nnoremap ,s <ESC>/
-nnoremap ,l <C-w>l
-nnoremap ,h <C-w>h
-nnoremap ,k <C-w>k
-nnoremap ,j <C-w>j
-nnoremap ,x <ESC>:wq<CR>
-nnoremap ,w <ESC>:w<CR>
-nnoremap ,q <ESC>:q<CR>
-nnoremap ,X <ESC>:wq!<CR>
-nnoremap ,W <ESC>:w!<CR>
-nnoremap ,Q <ESC>:q!<CR>
+noremap ,t :'<,'>Tabularize /
+noremap ,r :%s//gc<Left><Left><Left>
+noremap ,s <ESC>/
+noremap ,l <C-w>l
+noremap ,h <C-w>h
+noremap ,k <C-w>k
+noremap ,j <C-w>j
+noremap ,x <ESC>:wq<CR>
+noremap ,w <ESC>:w<CR>
+noremap ,q <ESC>:q<CR>
+noremap ,X <ESC>:wq!<CR>
+noremap ,W <ESC>:w!<CR>
+noremap ,Q <ESC>:q!<CR>
 
 " ranger.vim
 let g:ranger_map_keys = 0
@@ -95,7 +95,7 @@ let g:which_key_map['q'] = [ ':qa!', 'quit']
 "let g:which_key_map['w'] = [ ':wqa', 'write']
 "let g:which_key_map['s'] = [ '-', 'search']
 "let g:which_key_map['S'] = [ '<C-S>', 'search & replace']
-"
+
 set viewoptions=cursor,folds,slash,unix
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview

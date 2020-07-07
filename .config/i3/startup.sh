@@ -13,8 +13,3 @@ xset r rate 300 50 &
 nm-applet &
 
 redshift -O 3600 &
-
-setxkbmap -option caps:swapescape &
-
-
-
