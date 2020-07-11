@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+rsync -avu --delete ~/pkglist.txt	~/.dotfiles
 rsync -avu --delete ~/.zshrc            ~/.dotfiles
 rsync -avu --delete ~/.localrc          ~/.dotfiles
 rsync -avu --delete ~/.zsh_history      ~/.dotfiles
