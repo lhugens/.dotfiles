@@ -1,35 +1,31 @@
 #!/bin/zsh
 
-rsync -avu --delete ~/pkglist.txt	~/.dotfiles
-rsync -avu --delete ~/.zshrc            ~/.dotfiles
-rsync -avu --delete ~/.localrc          ~/.dotfiles
-rsync -avu --delete ~/.zsh_history      ~/.dotfiles
-rsync -avu --delete ~/.vimrc            ~/.dotfiles
-rsync -avu --delete ~/.vim              ~/.dotfiles
-rsync -avu --delete ~/.tmux.conf        ~/.dotfiles
-rsync -avu --delete ~/.scripts          ~/.dotfiles
-rsync -avu --delete ~/.config/sxhkd     ~/.dotfiles/.config
-rsync -avu --delete ~/.config/bspwm     ~/.dotfiles/.config
-rsync -avu --delete ~/.config/i3        ~/.dotfiles/.config
-rsync -avu --delete ~/.config/i3status  ~/.dotfiles/.config
-rsync -avu --delete ~/.config/spectrwm  ~/.dotfiles/.config
-rsync -avu --delete ~/.config/dwm       ~/.dotfiles/.config
-rsync -avu --delete ~/.config/alacritty ~/.dotfiles/.config
-rsync -avu --delete ~/.config/kitty     ~/.dotfiles/.config
-rsync -avu --delete ~/.config/tmux      ~/.dotfiles/.config
-rsync -avu --delete ~/.config/st        ~/.dotfiles/.config
-rsync -avu --delete ~/.config/dunst     ~/.dotfiles/.config
-rsync -avu --delete ~/.config/zathura   ~/.dotfiles/.config
-rsync -avu --delete ~/.config/polybar   ~/.dotfiles/.config
-rsync -avu --delete ~/.config/rofi      ~/.dotfiles/.config
-rsync -avu --delete ~/.config/albert    ~/.dotfiles/.config
+rsync -avu --delete ~/pkglist.txt	~/git/.dotfiles
+rsync -avu --delete ~/.zshrc            ~/git/.dotfiles
+rsync -avu --delete ~/.localrc          ~/git/.dotfiles
+rsync -avu --delete ~/.zsh_history      ~/git/.dotfiles
+rsync -avu --delete ~/.vimrc            ~/git/.dotfiles
+rsync -avu --delete ~/.vim              ~/git/.dotfiles
+rsync -avu --delete ~/.tmux.conf        ~/git/.dotfiles
+rsync -avu --delete ~/.scripts          ~/git/.dotfiles
+rsync -avu --delete ~/.config/sxhkd     ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/bspwm     ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/i3        ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/i3status  ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/spectrwm  ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/dwm       ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/alacritty ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/kitty     ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/tmux      ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/st        ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/dunst     ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/zathura   ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/polybar   ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/rofi      ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/albert    ~/git/.dotfiles/.config
 
 
-cd ~/.dotfiles
-
-rm .config/st/st
-rm .config/st/st-copyout
-rm .config/st/st-urlhandler
+cd ~/git/.dotfiles
 
 git add --all &&
 git commit -a -m "update" &&

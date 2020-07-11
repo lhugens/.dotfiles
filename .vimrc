@@ -13,6 +13,7 @@ let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
+Plugin 'morhetz/gruvbox'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'

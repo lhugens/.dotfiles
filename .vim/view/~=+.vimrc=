@@ -9,45 +9,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-10,27fold
-29,44fold
-46,51fold
-53,55fold
-57,60fold
-62,75fold
-77,78fold
-77,78fold
-80,97fold
-80,97fold
-99,101fold
-10
-normal! zo
-29
-normal! zo
-46
-normal! zo
-53
-normal! zo
-57
-normal! zo
-62
-normal! zo
-77
-normal! zo
-77
-normal! zo
-80
-normal! zo
-80
-normal! zo
-99
-normal! zo
-let s:l = 24 - ((23 * winheight(0) + 29) / 58)
+let s:l = 1 - ((0 * winheight(0) + 29) / 58)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-24
-normal! 0
+1
+normal! 014|
 let &so = s:so_save | let &siso = s:siso_save
 nohlsearch
 doautoall SessionLoadPost
