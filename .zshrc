@@ -1,7 +1,3 @@
-## If not running interactively, do not do anything
-#[[ $- != *i* ]] && return
-#[[ -z "$TMUX" ]] && exec tmux 
-
 #history control
 HISTCONTROL=ignoredups:ignorespace:erasedups
 HISTSIZE=100000
@@ -15,10 +11,6 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="bira"
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-
-#source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source $ZSH/themes/bira.zsh-theme
 
 # aliases
 alias cl="clear"

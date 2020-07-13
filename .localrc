@@ -7,4 +7,4 @@ alias jp="source ~/.scripts/jupyter"
 alias virtual="source ~/.scripts/virtual"
 
 # functions
-k(){ cd /home/hugens/kyria/qmk_firmware/keyboards/kyria/keymaps/lhugens && vim keymap.c }
+k(){ vim /home/hugens/git/qmk_firmware/keyboards/kyria/keymaps/lhugens/keymap.c }

@@ -6,6 +6,7 @@ rsync -avu --delete ~/.localrc          ~/git/.dotfiles
 rsync -avu --delete ~/.zsh_history      ~/git/.dotfiles
 rsync -avu --delete ~/.vimrc            ~/git/.dotfiles
 rsync -avu --delete ~/.vim              ~/git/.dotfiles
+rsync -avu --delete ~/.dwm              ~/git/.dotfiles
 rsync -avu --delete ~/.tmux.conf        ~/git/.dotfiles
 rsync -avu --delete ~/.scripts          ~/git/.dotfiles
 rsync -avu --delete ~/.config/sxhkd     ~/git/.dotfiles/.config
@@ -13,7 +14,6 @@ rsync -avu --delete ~/.config/bspwm     ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/i3        ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/i3status  ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/spectrwm  ~/git/.dotfiles/.config
-rsync -avu --delete ~/.config/dwm       ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/alacritty ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/kitty     ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/tmux      ~/git/.dotfiles/.config

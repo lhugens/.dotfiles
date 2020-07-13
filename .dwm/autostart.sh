@@ -15,3 +15,5 @@ nm-applet &
 redshift -O 3600 &
 
 setxkbmap pt &
+
+$HOME/.scripts/dwmbar &
