@@ -1,11 +1,8 @@
 #!/bin/bash
 
 entry="$( { find -L   \
-        ~/Documents     \
-        ~/Downloads     \
-        ~/Movies        \
-        ~/Videos        \
-        -type f | rofi -width 100 -sort true -sorting-method fzf -dmenu -i -p open ; } || echo"" )"
+        ~/books     \
+        -type f | dmenu -i -l 10 -p "open" ; } || echo"" )"
 
 [[ -z "$entry" ]] && exit 
 

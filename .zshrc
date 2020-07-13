@@ -19,6 +19,7 @@ alias df="dfc"
 alias :q="exit"
 alias z="$EDITOR ~/.zshrc"
 alias v="$EDITOR ~/.vimrc"
+alias tmux="TERM=xterm-256color tmux"
 
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc

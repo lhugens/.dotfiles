@@ -24,6 +24,7 @@ Plugin 'liuchengxu/vim-which-key'
 Plugin 'francoiscabrol/ranger.vim'
 Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ap/vim-css-color'
 call vundle#end()
 filetype plugin on 
 
