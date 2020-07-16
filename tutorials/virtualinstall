@@ -1,21 +1,13 @@
 #!/bin/zsh
 
-sudo pacman -S python-pip
+# to create a virtual environment in the current directory with the name 'virtual'
+python3 -m venv virtual
 
-pip install --user virtualenvwrapper
+# to activate it
+source virtual/bin/activate
 
-export WORKON_HOME=~/Envs
-mkdir -p $WORKON_HOME
-
-
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
-source $HOME/.local/bin/virtualenvwrapper.sh
-
-mkdir /home/hugens/Documents/JP
-
-mkvirtualenv -a /home/hugens/Documents/JP jp
+# to deactivate
+deactivate
 
 ---------------------------------------------------
 
