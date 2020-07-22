@@ -1,6 +1,0 @@
-# aliases
-alias grid="ssh fc-up201705764@submit.grid.fe.up.pt"
-alias pires="ssh fc-up201201453@submit.grid.fe.up.pt"
-
-# functions
-k(){ vim /home/hugens/git/qmk_firmware/keyboards/kyria/keymaps/lhugens/keymap.c }

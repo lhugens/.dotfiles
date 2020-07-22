@@ -1,7 +1,6 @@
 #!/bin/zsh
 
 rsync -avu --delete ~/.zshrc            ~/git/.dotfiles
-rsync -avu --delete ~/.localrc          ~/git/.dotfiles
 rsync -avu --delete ~/.vimrc            ~/git/.dotfiles
 rsync -avu --delete ~/.dwm              ~/git/.dotfiles
 rsync -avu --delete ~/.tmux.conf        ~/git/.dotfiles
@@ -16,11 +15,10 @@ rsync -avu --delete ~/.config/kitty     ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/tmux      ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/st        ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/dunst     ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/ranger    ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/zathura   ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/polybar   ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/rofi      ~/git/.dotfiles/.config
-rsync -avu --delete ~/.config/albert    ~/git/.dotfiles/.config
-
 
 cd ~/git/.dotfiles
 
