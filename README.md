@@ -12,6 +12,6 @@ To get my exact shell configuration:
 
 ``````
 git clone https://github.com/lhugens/.dotfiles
-source .dotfiles/.scripts/setup0
-source .dotfiles/.scripts/setup1
+source .dotfiles/.scripts/others/setup0
+source .dotfiles/.scripts/others/setup1
 ``````
