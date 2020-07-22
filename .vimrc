@@ -13,7 +13,6 @@ let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-Plugin 'morhetz/gruvbox'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'
@@ -30,13 +29,13 @@ filetype plugin on
 
 " VIM INTERNAL
 syntax on 
-set background=dark
-colorscheme gruvbox
+set t_Co=256
 
 set number relativenumber
 set encoding=utf-8 
 set clipboard=unnamedplus
 set cursorline
+set autoindent
 
 nnoremap <Tab>    :bnext!     <CR>
 nnoremap <S-Tab>  :bprevious! <CR>
@@ -44,6 +43,9 @@ noremap  <Leader> y "*y
 noremap  <Leader> p "*p
 noremap  <Leader> Y "+y
 noremap  <Leader> P "+p
+
+let g:sierra_Twilight = 1
+colorscheme sierra 
 
 " load directory-specific configs from a .vim fil
 let b:thisdir=expand("%:p:h")
@@ -59,7 +61,8 @@ let g:indent_guides_guide_size = 1
 " vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='base16_default'
+let g:airline_theme = 'zenburn'
+
 
 " mappings with arguments
 noremap ,t :'<,'>Tabularize /

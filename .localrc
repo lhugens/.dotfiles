@@ -1,10 +1,6 @@
 # aliases
 alias grid="ssh fc-up201705764@submit.grid.fe.up.pt"
 alias pires="ssh fc-up201201453@submit.grid.fe.up.pt"
-alias rv="sudo rm -r .vault & bash uninstall.bash && bash install.bash"
-alias iu="bash uninstall.bash && bash install.bash"
-alias jp="source ~/.scripts/jupyter"
-alias virtual="source ~/.scripts/virtual"
 
 # functions
 k(){ vim /home/hugens/git/qmk_firmware/keyboards/kyria/keymaps/lhugens/keymap.c }

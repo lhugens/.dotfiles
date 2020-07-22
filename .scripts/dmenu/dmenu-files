@@ -1,8 +1,8 @@
 #!/bin/bash
 
-entry="$( { find -L   \
-        ~/books     \
-        -type f | dmenu -i -l 10 -p "open" ; } || echo"" )"
+cd ~/shared
+
+entry="$( { find . -type f | grep -v "$RECYCLE.BIN\|System Volume Information" | dmenu -i -l 10 -p "open" ; } || echo"" )"
 
 [[ -z "$entry" ]] && exit 
 

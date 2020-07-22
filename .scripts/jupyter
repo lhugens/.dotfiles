@@ -1,6 +1,0 @@
-#!/bin/sh
-
-source ~/.scripts/virtual
-jupyter-notebook >/dev/null &
-disown 
-exit

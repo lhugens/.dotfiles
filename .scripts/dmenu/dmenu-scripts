@@ -4,8 +4,7 @@ declare options=("suspend
 shutdown
 reboot
 escswap
-red+
-red0")
+redshift")
 
 choice=$(echo -e "${options[@]}" | dmenu -i -p 'run')
 
@@ -22,11 +21,8 @@ case "$choice" in
 	escswap)
 		~/.scripts/escswap
 	;;
-	red+)
-		redshift -O 3600
-	;;
-	red0)
-		redshift -x
+	redshift)
+		redshift -x && redshift -O 3600
 	;;
 	*)
 		exit 1

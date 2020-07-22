@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+rsync -avu --delete /home/hugens/shared /run/media/hugens/L_HUGENS 

@@ -22,9 +22,13 @@ alias v="$EDITOR ~/.vimrc"
 alias t="TERM=xterm-256color tmux"
 alias tk="tmux kill-server"
 
+# functions
+activate(){ source $1/bin/activate }
+
 # local settings
 [ -f ~/.localrc ] && source ~/.localrc
 
 # add ~/.scripts and ~/.local/bin folders to path
 export PATH=$PATH$( find $HOME/.scripts/ -type d -printf ":%p" )
 export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
+export PATH="$HOME/.emacs.d/bin${PATH:+:${PATH}}"
