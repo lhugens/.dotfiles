@@ -43,6 +43,10 @@ noremap  <Leader> y "*y
 noremap  <Leader> p "*p
 noremap  <Leader> Y "+y
 noremap  <Leader> P "+p
+nnoremap j gj
+vnoremap j gj
+nnoremap k gk
+vnoremap k gk
 
 let g:sierra_Twilight = 1
 colorscheme sierra 
