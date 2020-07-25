@@ -13,6 +13,7 @@ rsync -avu --delete ~/.config/spectrwm  ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/alacritty ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/kitty     ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/tmux      ~/git/.dotfiles/.config
+rsync -avu --delete ~/.config/nvim      ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/st        ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/dunst     ~/git/.dotfiles/.config
 rsync -avu --delete ~/.config/ranger    ~/git/.dotfiles/.config

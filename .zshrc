@@ -4,7 +4,7 @@ HISTSIZE=100000
 HISTFILESIZE=2000000
 
 # oh-my-zsh config
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 export TERMINAL=/usr/local/bin/st
 export BROWSER=/usr/bin/brave
 export ZSH="$HOME/.oh-my-zsh"
