@@ -1,3 +1,8 @@
 #!/bin/zsh
 
-rsync -avu --delete /home/hugens/shared /run/media/hugens/L_HUGENS 
+rsync -avu --delete /home/hugens/shared/fcup 	        /run/media/hugens/L_HUGENS/shared
+rsync -avu --delete /home/hugens/shared/theory 	        /run/media/hugens/L_HUGENS/shared
+rsync -avu --delete /home/hugens/shared/temp            /run/media/hugens/L_HUGENS/shared
+rsync -avu --delete /home/hugens/shared/transfers       /run/media/hugens/L_HUGENS/shared
+rsync -avu --delete /home/hugens/shared/uni 	        /run/media/hugens/L_HUGENS/shared
+rsync -avu --delete /home/hugens/shared/utrecht         /run/media/hugens/L_HUGENS/shared

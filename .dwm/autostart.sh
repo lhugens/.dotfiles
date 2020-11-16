@@ -1,4 +1,5 @@
 #!/bin/bash
+--right-of HDMI1
 
 picom -b &
 

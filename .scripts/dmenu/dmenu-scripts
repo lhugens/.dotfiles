@@ -4,7 +4,8 @@ declare options=("suspend
 shutdown
 reboot
 escswap
-redshift")
+redshift
+display")
 
 choice=$(echo -e "${options[@]}" | dmenu -i -p 'run')
 
@@ -24,6 +25,10 @@ case "$choice" in
 	redshift)
 		redshift -x && redshift -O 3600
 	;;
+	display)
+		xrandr  --output HDMI1 --mode 1920x1080 --rotate normal --output eDP1  --mode 1920x1080 --rotate normal --right-of HDMI1
+	;;
+                
 	*)
 		exit 1
 	;;
