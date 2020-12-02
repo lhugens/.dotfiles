@@ -1,5 +1,10 @@
 #!/bin/bash
---right-of HDMI1
+
+rm /home/hugens/.config/autostart/*
+
+lxsession --noautostart 2>/dev/null &
+
+nm-applet &
 
 picom -b &
 
