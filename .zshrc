@@ -21,7 +21,6 @@ export BROWSER=/usr/bin/chromium
 alias cl="clear"
 alias rg="ranger"
 alias df="dfc"
-alias vim=nvim
 alias :q="exit"
 alias z="$EDITOR ~/.zshrc"
 alias v="$EDITOR ~/.vimrc"
