@@ -1,5 +1,6 @@
 syntax on 
-"set t_Co=256
+set t_Co=256
+color delek
 
 set number relativenumber
 set encoding=utf-8 
