@@ -19,3 +19,5 @@ setxkbmap pt &
 redshift -O 3600 &
 
 $HOME/.scripts/dwmbar &
+
+# $HOME/.scripts/escswap &

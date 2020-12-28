@@ -25,8 +25,9 @@ alias :q="exit"
 alias z="$EDITOR ~/.zshrc"
 alias v="$EDITOR ~/.vimrc"
 alias t="TERM=xterm-256color tmux"
-alias tk="tmux kill-server"
+alias tk="tmux kill-session"
 alias u="cd ~/shared/uni && ranger"
+alias vim=nvim
 
 # functions
 activate(){ source ~/devel/env/bin/activate }
@@ -38,3 +39,4 @@ run(){ g++ $1.cpp -o $1 && ./$1 }
 # add ~/.scripts and ~/.local/bin folders to path
 export PATH=$PATH$( find $HOME/.scripts/ -type d -printf ":%p" )
 export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
+[ -f "/home/hugens/.ghcup/env" ] && source "/home/hugens/.ghcup/env" # ghcup-env

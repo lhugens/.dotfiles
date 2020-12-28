@@ -55,7 +55,7 @@ memory(){
 }
 
 while :; do
-	xsetroot -name "  $(cpu) | $(celsius) | $(memory) | $(disk) | $(vol) | $(bat) | $(calendar) "
+	xsetroot -name "  $(cpu) | $(celsius) | $(memory) | $(disk) | $(vol) | $(bat) | $(calendar)"
 	sleep 3
 done
 

@@ -2,7 +2,6 @@
 
 rsync -avu --delete ~/.zshrc            ~/git/.dotfiles
 rsync -avu --delete ~/antigen.zsh       ~/git/.dotfiles
-rsync -avu --delete ~/.vimrc            ~/git/.dotfiles
 rsync -avu --delete ~/.dwm              ~/git/.dotfiles
 rsync -avu --delete ~/.tmux.conf        ~/git/.dotfiles
 rsync -avu --delete ~/.scripts          ~/git/.dotfiles
