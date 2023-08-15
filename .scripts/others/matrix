@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+from time     import sleep
+from sys      import stdout
+from os       import system
+from colorama import init, Fore, Back, Style
+
+init()
+
+trinity =   ["    Wake up, Neo...     ",
+            "    The Matrix has you...",
+            "    Follow the white rabbit.",
+            "    Knock, knock, Neo."] 
+
+for n in range(4):
+    sleep(3)
+    system("clear")
+    print("\n"*4)
+
+    for char in trinity[n]:
+        if n == 3:
+            print(Fore.GREEN + trinity[n])
+            sleep(3)
+            system("clear")
+
+        else:
+            stdout.write(Fore.GREEN + "%c"%char)
+            stdout.flush()
+            sleep(.2)

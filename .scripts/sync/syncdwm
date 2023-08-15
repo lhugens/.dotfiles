@@ -1,0 +1,13 @@
+#!/bin/bash
+
+rsync -avu --exclude ~/.git/dwm/.git --delete ~/git/dwm/* ~/git/mydwm/.
+
+cd ~/.git/mydwm
+
+git add --all &&
+git commit -a -m "update" &&
+git push origin master &&
+
+cd -
+
+rsync -avu --delete ~/.dwm ~/.git/.dotfiles

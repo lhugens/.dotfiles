@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+sudo wipefs --all $1 &&
+
+sudo fdisk $1 &&
+
+sudo mkfs.vfat "${1}1" -n $2

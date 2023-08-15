@@ -1,0 +1,15 @@
+#!/bin/bash
+
+pip install jupyter jupyterthemes jupyter_contrib_nbextensions jupyter_nbextensions_configurator &&
+
+jupyter contrib nbextension install --user ;
+
+jupyter nbextensions_configurator enable --user ;
+
+# light theme
+#jt -t onedork -fs 111 -tfs 11 -nfs 115 -cellw 100% -T -vim -lineh 130 ;
+
+# dark theme
+jt -t onedork -fs 111 -tfs 11 -nfs 115 -cellw 100% -T -vim -lineh 130 ;
+
+

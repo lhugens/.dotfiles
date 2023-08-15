@@ -1,0 +1,30 @@
+#!/bin/bash
+
+cd ~/shared/
+
+entry="$( { find .  -path ./transfers -prune -false -o \
+                    -path ./\$RECYCLE.BIN -prune -false -o \
+                    -type f | dmenu -i -l 10 -p "open" ; } || echo"" )"
+#                    -path ./uni/.other -prune -false -o \
+
+[[ -z "$entry" ]] && exit 
+
+case $(file --mime-type "$entry" -bL) in
+
+    text/html)
+        brave "$entry"
+        ;;
+
+    text/* | inode/x-empty | application/json | application/octet-stream)
+        st -e vim "$entry"
+        ;;
+
+    video/*)
+        vlc "$entry"
+        ;;
+
+    application/pdf | image/vnd.djvu | application/postscript | application/epub+zip)
+        zathura "$entry"
+        ;;
+
+esac

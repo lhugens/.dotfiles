@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# back up mirrorlist first
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.old
+
+# point mirrorlist to the archive specifying date to rollback to e.g. to return to 5th April:
+repo='$repo'
+arch='$arch'
+
+echo "Server=https://archive.archlinux.org/repos/${1}/${2}/${3}/$repo/os/$arch" > /etc/pacman.d/mirrorlist
+
+# do a full system upgrade (double 'y' refreshes your package database, double 'u' allows pacman to downgrade packages)
+pacman -Syyuu
+

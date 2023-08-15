@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ~/.scripts/sync/syncdot ;
+source ~/.scripts/sync/syncdwm ;
+source ~/.scripts/sync/syncdisk ;

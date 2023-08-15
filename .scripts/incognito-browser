@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#/usr/bin/firefox --incognito
+#/usr/bin/chromium --incognito
+/usr/bin/brave

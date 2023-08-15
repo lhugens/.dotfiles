@@ -1,0 +1,68 @@
+#!/bin/sh
+
+bat() {
+    bat=$(acpi | awk -F ',' '{print $2}' | tr -d " ")
+    state=$(acpi | awk -F ',' '{print $1}' | awk -F ':' '{print $2}')
+    charging=$(acpi | grep "Charging")
+    
+    if test -z "$charging"; then
+        echo "bat: $bat"
+    else
+        echo "chr: $bat"
+    fi
+}
+
+celsius(){
+    celsius=`cat /sys/class/thermal/thermal_zone*/temp | sort -nrk1,1 | sed -n 1p | awk '{print $1 / 1000}'`
+    echo -e "temp: $celsiusºC"
+}
+
+vol() {
+    vol=`amixer get Master | awk -F'[][]' 'END{ print $4":"$2 }' | sed 's/on://g'`
+    echo "vol: $vol"
+}
+
+cpu() {
+	top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}' | \
+			  xargs echo "cpu" 
+}
+
+disk() {
+	echo "disk $(df -h "/home" | awk ' /[0-9]/ {print $3 "/" $2}')"
+}
+
+calendar() {
+	current=$(date "+%d/%m - %H:%M")
+	echo "$current"
+}
+
+net(){
+	update() {
+    	sum=0
+    	for arg; do
+        	read -r i < "$arg"
+        	sum=$(( sum + i ))
+    	done
+   	 cache=${XDG_CACHE_HOME:-$HOME/.cache}/${1##*/}
+  	 [ -f "$cache" ] && read -r old < "$cache" || old=0
+ 	 printf %d\\n "$sum" > "$cache"
+	 printf %d\\n $(( (sum - old) / 1024 ))
+	}
+
+	rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
+	tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
+
+	printf "u %dKiB d %dKiB\\n" "$rx" "$tx"
+}
+
+
+memory(){
+	free --mebi | sed -n '2{p;q}' | awk '{printf ("mem %2.2fGiB\n", ( $3 / 1024) )}'
+}
+
+while :; do
+	xsetroot -name "| $(bat) | $(vol) | $(calendar)"
+	sleep 3
+done
+
+

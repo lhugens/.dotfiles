@@ -1,0 +1,8 @@
+#!/bin/bash
+
+nohup firefox --new-window "https://doc.rust-lang.org/book/title-page.html" >/dev/null 2>&1 &
+
+xfce4-terminal -e "cd /home/hugens/devel/learning/rust" &
+
+exit
+

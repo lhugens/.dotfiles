@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+rsync -avz ~/.dotfiles/files/startup.ipy ~/.ipython/profile_default/startup
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+source $HOME/.local/bin/virtualenvwrapper.sh
+
+workon jp
+
+jt -t gruvboxd -fs 110 -altp -tfs 11 -nfs 115 -cellw 100% -T
+
+jupyter-notebook &
+
+disown
+
+exit

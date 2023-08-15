@@ -1,0 +1,34 @@
+#!/bin/bash
+
+files=(
+    "/home/hugens/.zshtc"
+    "/home/hugens/.vimrc"
+    "/home/hugens/.antigen.zsh"
+    "/home/hugens/.antigen"
+    "/home/hugens/.scripts"
+    )
+
+directories=(
+    "/home/hugens/.config/dwm"
+    "/home/hug ns/.config/nvim"
+    "/home/hugens/.config/ranger"
+    "/home/hugens/.config/terminator"
+    "/home/hugens/.config/Thunar"
+    "/home/hugens/.config/xfce4"
+    )
+
+for file in "${files[@]}"; do
+    rsync -avu --delete "$file" /home/hugens/.git/lhugens/.dotfiles/.
+done
+
+for dir in "${directories[@]}"; do
+    rsync -avu --delete "$dir" /home/hugens/.git/lhugens/.dotfiles/.config
+done
+
+cd /home/hugens/.git/lhugens/.dotfiles
+
+git add --all &&
+git commit -a -m "update" &&
+git push origin main &&
+
+cd -

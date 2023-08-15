@@ -1,0 +1,9 @@
+#!/bin/sh
+
+pip install jupyter jupyterthemes jupyter_contrib_nbextensions jupyter_nbextensions_configurator &&
+
+jt -t gruvboxd -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T &&
+
+jupyter contrib nbextension install --user &&
+
+jupyter nbextensions_configurator enable --user 

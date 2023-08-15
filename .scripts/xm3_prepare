@@ -1,0 +1,6 @@
+#!/bin/bash
+
+modprobe btusb                                                  
+systemctl start bluetooth                            
+#systemctl --user --now enable pipewire pipewire-pulse
+

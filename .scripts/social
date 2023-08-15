@@ -1,0 +1,5 @@
+#!/bin/bash
+
+nohup firefox --new-window "https://web.whatsapp.com" & 
+nohup telegram-desktop >/dev/null 2>&1 &
+exit

@@ -1,0 +1,48 @@
+#!/bin/bash
+
+declare options=("lock
+suspend
+shutdown
+headphones
+reboot
+escswap
+redshift
+matlab
+display")
+
+choice=$(echo -e "${options[@]}" | dmenu -i -p 'run')
+
+case "$choice" in
+	lock)
+		slock
+	;;
+	suspend)
+		slock & systemctl suspend
+	;;
+	shutdown)
+		shutdown now
+	;;
+	reboot)
+		reboot
+	;;
+	headphones)
+		~/.scripts/xm3
+	;;
+	escswap)
+		~/.scripts/escswap
+	;;
+	redshift)
+		redshift -x && redshift -O 3600
+	;;
+	display)
+		xrandr  --output HDMI1 --mode 1920x1080 --rotate normal --output eDP1  --mode 1920x1080 --rotate normal --right-of HDMI1
+	;;
+	matlab)
+                ~/.scripts/matlab
+		#/usr/local/MATLAB/R2020b/bin/matlab &
+	;;
+                
+	*)
+		exit 1
+	;;
+esac

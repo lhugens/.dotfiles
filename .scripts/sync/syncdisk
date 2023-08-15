@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd 
+
+udisksctl unmount -b /dev/sda1 ; 
+
+sleep 1 ;
+
+udisksctl mount -b /dev/sda1 &&
+
+rsync -avu --no-owner --no-group --no-perms  \
+        --delete $(ls ~/) /run/media/hugens/L_HUGENS/sys_backup \
+        --exclude=shared/\$RECYCLE.BIN/ \
+        --exclude=shared/System\ Volume\ Information/ \
+        --exclude=shared/movies/
+
+udisksctl unmount -b /dev/sda1 ;

@@ -1,0 +1,17 @@
+#!/usr/bin/expect -f
+
+set prompt "#"
+set address "14:3F:A6:41:02:BC"
+#set address "FC:58:FA:39:ED:16"
+
+spawn bluetoothctl
+
+expect -re $prompt
+
+send "remove $address\r"
+
+expect -re "removed|available"
+
+send "quit\r"
+
+expect eof

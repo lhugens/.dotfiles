@@ -1,0 +1,5 @@
+#!/bin/bash
+
+result="$( setxkbmap -query | grep "caps" )"
+
+[[ -z "$result" ]] && { setxkbmap -option caps:swapescape ; } || { setxkbmap -option; }

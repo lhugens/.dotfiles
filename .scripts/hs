@@ -1,0 +1,13 @@
+#!/bin/bash
+
+2>/dev/null 1>&2 brave https://www.youtube.com/playlist\?list\=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV &
+
+cd ~/.git/functional-programming/haskell
+
+tmux new-session -d -s 'haskell'
+
+tmux split-window -v -p 40
+
+tmux -2 attach-session -d
+
+

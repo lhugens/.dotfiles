@@ -1,0 +1,43 @@
+#!/bin/bash
+
+battery_threshold=20
+
+while true; do
+
+    battery_level=$(acpi -b | awk '{print $4}' | tr -d '%,')
+
+    if [[ $battery_level -le $battery_threshold ]]; then
+        dunstify --urgency=critical "Low Battery" "Battery level is ${battery_level}%."
+        break
+    fi 
+
+    sleep 5;
+done
+
+battery_threshold=10
+
+while true; do
+
+    battery_level=$(acpi -b | awk '{print $4}' | tr -d '%,')
+
+    if [[ $battery_level -le $battery_threshold ]]; then
+        dunstify --urgency=critical "Low Battery" "Battery level is ${battery_level}%."
+        break
+    fi 
+
+    sleep 5;
+done
+
+battery_threshold=5
+
+while true; do
+
+    battery_level=$(acpi -b | awk '{print $4}' | tr -d '%,')
+
+    if [[ $battery_level -le $battery_threshold ]]; then
+        dunstify --urgency=critical "Low Battery" "Battery level is ${battery_level}%."
+        break
+    fi 
+
+    sleep 5;
+done

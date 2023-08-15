@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#youtube-dl -f best -ciw -o "%(playlist)s-%(playlist_index)%-%(title)s.%(ext)s" -v $1
+youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v $1
