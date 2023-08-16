@@ -68,7 +68,7 @@ memory(){
 }
 
 while :; do
-	xsetroot -name "   $(bat)   $(vol)   $(calendar)"
+	xsetroot -name "$(bat)   $(vol)   $(calendar)"
 	#xsetroot -name "| $(bat) | $(vol) | $(calendar)"
 	sleep 3
 done
