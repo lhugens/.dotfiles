@@ -89,10 +89,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("~/.scripts/browser") },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("thunar") },
-	{ MODKEY,                       XK_space,  spawn,          SHCMD("rofi -show drun -show-icons -columns 2") },
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("~/.scripts/dmenu/dmenu-files") },
 	{ MODKEY,                       XK_c,      spawn,          SHCMD("~/.scripts/dmenu/dmenu-scripts") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("thunar") },
+	{ MODKEY,                       XK_space,  spawn,          SHCMD("rofi -show drun -show-icons -columns 2") },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("autorandr --cycle") },
 
 	{ 0, XF86XK_AudioMicMute,	spawn,		SHCMD("amixer sset Capture toggle") },
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("amixer sset Master toggle") },

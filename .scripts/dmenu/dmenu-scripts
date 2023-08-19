@@ -20,7 +20,7 @@ case "$choice" in
 		slock & systemctl suspend
 	;;
 	shutdown)
-		shutdown now
+		sudo shutdown now
 	;;
 	reboot)
 		reboot

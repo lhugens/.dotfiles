@@ -1,0 +1,2 @@
+# turn all files in a directory executable
+chmod +x *

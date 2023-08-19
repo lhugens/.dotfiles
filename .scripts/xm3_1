@@ -1,0 +1,42 @@
+#!/usr/bin/expect -f
+
+set prompt "#"
+set timeout -1
+set address "14:3F:A6:41:02:BC"
+#set address "FC:58:FA:39:ED:16"
+
+spawn bluetoothctl
+
+expect -re $prompt
+
+send "power on\r"
+
+expect "Changing power on succeeded"
+
+send "remove $address\r"
+
+expect -re "removed|available"
+
+send "scan on\r"
+
+expect -re "WH-1000XM3"
+
+send "scan off\r"
+
+expect -re $prompt
+
+send "trust $address\r"
+
+sleep 1
+
+send "pair $address\r"
+
+expect "Pairing successful"
+
+send "connect $address\r"
+
+expect "Connection successful"
+
+send "quit\r"
+
+expect eof
