@@ -1,6 +1,11 @@
 #!/bin/bash
 
-entry="$( { find ~/Documents/* -type f | awk '{print substr($0, 23)}' | dmenu -i -l 10 -p "open" ; } || echo"" )"
+cd ~/shared/
+
+entry="$( { find .  -path ./transfers -prune -false -o \
+                    -path ./\$RECYCLE.BIN -prune -false -o \
+                    -type f | dmenu -i -l 10 -p "open" ; } || echo"" )"
+#                    -path ./uni/.other -prune -false -o \
 
 [[ -z "$entry" ]] && exit 
 
@@ -11,7 +16,7 @@ case $(file --mime-type "$entry" -bL) in
         ;;
 
     text/* | inode/x-empty | application/json | application/octet-stream)
-        xfce4-terminal -e vim "$entry"
+        st -e vim "$entry"
         ;;
 
     video/*)
