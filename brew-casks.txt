@@ -1,3 +1,6 @@
 ghostty
 brave-browser
 visual-studio-code
+vlc
+spotify
+whatsapp
