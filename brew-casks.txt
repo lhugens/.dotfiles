@@ -1,0 +1,3 @@
+ghostty
+brave-browser
+visual-studio-code
